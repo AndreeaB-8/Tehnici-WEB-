@@ -1,0 +1,77 @@
+{
+	"cale_galerie":"resurse/imagini/galerie",
+	"imagini": [
+		{
+			"fisier":"cercei1.jpg",
+			"nume": "Cercei cu diamante",
+			"descriere":"Cercei din argint cu diamante",
+			"timp": ["dimineata", "zi"]
+		},
+		{
+			"fisier":"cercei2.jpg",
+			"nume": "Cercei handmade",
+			"descriere":"Cercei cu pietre semipretioase",
+			"timp":["dimineata"]
+		},
+		{
+			"fisier":"colier1.jpg",
+			"nume": "Colier argint",
+			"descriere":"Colier din argint cu diamante",
+			"timp":["noapte"]
+		},
+		{
+			"fisier":"bratara1.jpg",
+			"nume": "Bratara eleganta",
+			"descriere":"Bratara confectionata din argint",
+			"timp":["dimineata", "noapte"]
+		},
+		{
+			"fisier":"inel2.jpg",
+			"nume": "Inel din aur alb",
+			"descriere":"Inel logodna aur alb",
+			"timp":["zi", "noapte"]
+		},
+		{
+			"fisier":"ring1.jpg",
+			"nume": "Inel logodna argint",
+			"descriere":"Inel de logodna cu piatra semipretioasa",
+			"timp":["dimineata", "zi"]
+		},
+		{
+			"fisier":"ring4.jpg",
+			"nume": "Inel cu diamante",
+			"descriere":"Inel din argint cu diamante.",
+			"timp": ["dimineata", "zi"]
+		},
+		{
+			"fisier":"bratara3.jpg",
+			"nume": "Bratara handmade",
+			"descriere":"Bratara cu pietre semipretioase.",
+			"timp":["dimineata"]
+		},
+		{
+			"fisier":"colier3.jpg",
+			"nume": "Colier argint",
+			"descriere":"Colier din argint cu diamante",
+			"timp":["noapte"]
+		},
+		{
+			"fisier":"colier4.jpg",
+			"nume": "Colier elegant",
+			"descriere":"Colier confectionat din argint.",
+			"timp":["dimineata", "noapte"]
+		},
+		{
+			"fisier":"inel5.jpg",
+			"nume": "Inel din aur alb",
+			"descriere":"Inel logodna aur alb cu diamant",
+			"timp":["zi", "noapte"]
+		},
+		{
+			"fisier":"necklace5.jpg",
+			"nume": "Colier argint",
+			"descriere":" CC BY 4.0 Colier argint, cu pietre semipretioase",
+			"timp":["dimineata", "zi"]
+		}
+	]
+}

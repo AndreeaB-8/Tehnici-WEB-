@@ -1,0 +1,25 @@
+{
+  "name": "proiect-website-bijuterii",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "magazin",
+    "bijuterii",
+    "aur",
+    "argint",
+    "cadou"
+  ],
+  "author": "Balan Andreea",
+  "license": "ISC",
+  "description": "Site pentru un magazin dedicat bijuteriilor.",
+  "dependencies": {
+    "bootstrap": "^5.3.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "sass": "^1.87.0",
+    "sharp": "^0.34.1"
+  }
+}

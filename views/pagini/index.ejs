@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Lumière Bijoux</title>
+        <meta name="keywords" content="bijuterii, aur, argint, coliere, inele, cercei, bratari, cadouri, accesorii">
+        <meta name="description" content="Descopera colectia noastra de bijuterii din aur si argint. Accesorii perfecte pentru orice ocazie!">
+        
+        <%- include("../fragmente/head.ejs") %>
+    </head>
+
+    <body>
+        <%- include("../fragmente/header.ejs") %>
+        <main>
+            <div id = "grid-pagina">
+                <section id = "Welcome">
+                    <div class = "welcome-container">
+                        <div class = "welcome-text">
+
+                            
+                            <button type="button" class="btn btn-primary btn-lg">Stil-1-mare</button>
+                            
+                            
+                            <h2>Bine ati venit in lumea bijuteriilor noastre!</h2>
+                          <p>Fiecare bijuterie este o poveste unica, inspirata de rafinament si frumusete. Exploreaza colectiile noastre si gaseste acea piesa perfecta care sa iti reflecte stilul si personalitatea.</p>    
+                        <p>Pentru orice intrebare sau daca ai nevoie de ajutor, nu ezita sa ne contactezi! Suntem aici sa te sprijinim si sa iti oferim toate informatiile de care ai nevoie. </p>
+                        <p><b>Ip: </b> <%- locals.ip %> </p>
+                        </div>
+                        <div class = "welcome-image">
+                            <img src = "/resurse/imagini/beautiful-engagement-ring-with-diamonds.jpg">      
+                        </div>
+                    </div>
+                    
+                </section>
+                
+                <section id="Oferte_speciale">
+                    <h2>Oferte speciale</h2>
+                    <p>Profita acum de <b>reduceri</b> exclusive la colectiile noastre de bijuterii! 
+                    
+                    <p>Apasa pe bijuteria dorita pentru mai multe produse!</p>
+                    <img src = "/resurse/imagini/imagine_interactiva.avif" usemap = "#imagine_interactiva" width = 300>
+                    <map name = "imagine_interactiva">
+                        <area shape = "circle" coords = "231,160,13" href = "cercei.html" title = "Vezi cerceii">
+                        <area shape = "circle" coords = "190,367,15" href = "coliere.html" title = "Vezi colierele">
+                        <area shape = "circle" coords = "95,265,15" href = "inele.html" title = "Vezi inelele">
+                    </map>
+    
+                    <p><strong>Oferte valabile pentru o perioada limitata!</strong></p>
+    
+                    <section id = "Promotii_categorii">
+                        <h3>Promotii pe categorii</h3>
+                        <section id = "Oferte_coliere">
+                            <h4>Coliere</h4>
+                            <p>Reducere <b>10%</b> la <b>colierele cu diamante</b>!</p>
+                        </section>
+    
+                        <section id = "Oferte_bratari">
+                            <h4>Bratari</h4>
+                            <p><b>Bratari din argint</b> - <b>1+1 gratuit</b> la orice model!</p>
+                        </section>
+    
+                        <section id = "Oferte_cercei">
+                            <h4>Cercei</h4>
+                            <p><b>Cercei din aur</b> - <b>Transport gratuit</b> oriunde in tara!</p>
+                        </section>
+                    </section>
+                </section>
+    
+                <section id="Produse_populare">
+                    <h2>Cele mai iubite produse</h2>
+                    <p>Alege din cele mai apreciate bijuterii de catre clientii nostri:</p>
+                    
+                    <ul>
+                        <li>Colier din <b>aur alb</b> cu safire</li>
+                        <li>Bratara din <b>argint</b> cu charmuri personalizate</li>
+                        <li>Inel cu <b>diamant</b></li>
+                        <li>Cercei lungi cu <b>perle naturale</b></li>
+                    </ul>
+
+                    <p>Rasfoieste colectia noastra exclusiva de bijuterii direct in browser:</p>
+                    <embed src = "/resurse/imagini/catalog.pdf" type = "application/pdf">
+                    <p>
+                        <a href="/resurse/catalog.pdf" download="catalog.pdf">Click aici pentru a descoperi catalogul online!</a>.
+                    </p>   
+                </section>
+    
+                <section id="Prezentare_magazin">
+                    <h2>Despre noi</h2>
+                    <p>
+                        <b>Lumière Bijoux</b> este magazinul ideal pentru cei care cauta rafinament si stil. Oferim colectii unice, lucrate manual, cu <b>materiale pretioase</b> si <b>design modern</b>, perfecte pentru orice ocazie!
+                    </p>
+                    
+    
+                    <figure>
+                        <picture>
+                            <source srcset = "/resurse/imagini/poza_telefon" media="(max-width:300px)">
+                            <source srcset = "/resurse/imagini/poza_tableta.jpg" media = "(max-width: 1000px)">
+                            <img src = "/resurse/imagini/poza_desktop.jpg" width="200">
+                        </picture>
+                        <figcaption>
+                            Inel din <b>aur galben</b> si <b>diamante</b> - rafinament si eleganta pentru orice ocazie!
+                        </figcaption>
+                    </figure>
+    
+                    <p>
+                        Ne dorim sa aducem <b>eleganta</b> si <b>stralucire</b> in viata fiecarui client. Fie ca alegi un cadou special sau un accesoriu deosebit pentru tine, bijuteriile noastre sunt create pentru a impresiona si a dainui in timp.
+                    </p>
+    
+                    <p>
+                        Pasiunea noastra pentru bijuterii se reflecta in fiecare detaliu al produselor pe care le oferim. Punem accent pe <b>calitate</b>, <b>originalitate</b> si satisfactia clientilor nostri, pentru ca fiecare achizitie sa fie o <b>experienta de neuitat</b>.
+                    </p>
+    
+                    <p>
+                        <i class="fa fa-diamond fa-spin" style="font-size: 24px; color: #ffffff;"></i>
+
+                        <q>
+                            Bijuteriile au puterea de a fi acel lucru mic care te face sa te simti unic.
+                        </q>
+
+                        <i class="fa fa-diamond fa-spin" style="font-size: 24px; color: #ffffff;"></i>
+                    </p>
+                </section>
+    
+                
+                <section id = "Faq">
+                    <h2>Intrebari frecvente</h2>
+                    <details>
+                        <summary>Ce materiale sunt folosite pentru bijuterii?</summary>
+                        <p>Bijuteriile noastre sunt realizate din aur alb, galben si roz, dar si din argint.</p>
+                    </details>
+    
+                    <details>
+                        <summary>Oferiti garantie pentru produse?</summary>
+                        <p>Da, toate produsele noastre beneficiaza de o garantie de 24 de luni.</p>
+                    </details>
+    
+                    <details>
+                        <summary>Livrati si international?</summary>
+                        <p>Momentan livram doar pe teritoriul Romaniei, dar lucram la extinderea livrarilor internationale.</p>
+                    </details>
+    
+                    <details>
+                        <summary>Cum se calculeaza pretul unei bijuterii din aur?</summary>
+                        <p>
+                           Pretul unei bijuterii din aur depinde de greutatea aurului si de pretul per gram. Formula este: 
+                        </p>
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mi class = "pret-final" >Pret</mi>
+                                <mo>=</mo>
+                                <mi class = "greutate" >Greutate</mi>
+                                <mo>&times;</mo>
+                                <mi class = "pret" >Pret</mi>
+                                <mo>/</mo>
+                                <mi class = "gram" >Gram</mi>
+                            </mrow>
+                        </math>
+                    </details>
+                </section>
+    
+                <section id = "Video">
+                    <h2>Video</h2>
+                    <div class="container-iframe">
+                        <div class="taburi-iframe">
+                        <a href="https://www.youtube.com/embed/PvS8ZtiLPDE" target="ifr-video">Bijuterii unice</a>
+                        <a href="https://www.youtube.com/embed/Aptw-MC8tkU" target="ifr-video" >Fii special</a>
+                        </div>
+        
+                        <iframe name="ifr-video" width="560" height="315" src="https://www.youtube.com/embed/PvS8ZtiLPDE" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div> 
+                </section>
+
+                <section id = "Program">
+                    <div class = "orar-container">
+                        <table class = "orar">
+                            <caption>Programul magazinului fizic: </caption>
+                            <thead>
+                                <tr>
+                                    <th>Zi</th>
+                                    <th>Deschidere</th>
+                                    <th>Inchidere</th>
+                                    <th>Observatii</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Luni - Vineri</td>
+                                    <td>09:00</td>
+                                    <td>20:00</td>
+                                    <td rowspan="2">Program normal</td>
+                                </tr>
+                                <tr>
+                                    <td>Sambata</td>
+                                    <td>10:00</td>
+                                    <td>18:00</td>
+                                </tr>
+                                <tr>
+                                    <td>Duminica</td>
+                                    <td colspan="2" class = "inchis"> Inchis </td>
+                                    <td>Zi libera</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="4" class = "sarbatori">
+                                        Program special de sarbatori - verifica site-ul!
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>    
+                    </div>
+                </section> 
+            </div>
+
+            <hr class = "linie-decorativa">
+            
+        <!-- Galerie statica -->
+            <%- include("../fragmente/galerie.ejs") %>  
+
+        </main>
+
+    <%- include("../fragmente/footer.ejs") %>
+        
+    </body>
+</html>

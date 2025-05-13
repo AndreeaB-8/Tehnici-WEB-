@@ -1,0 +1,30 @@
+WEBVTT
+
+STYLE
+::cue {
+  font-family: "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 1; /*asta face ca textul sa apara pe 2 randuri*/
+  text-align: center;
+  color: transparent;  /* face textul transparent pentru a vedea gradientul */
+  background-image: linear-gradient(to right, #9b4dca, #5a2a91);  /* gradientul */
+  background-clip: text;  /* aplica gradientul pe text */
+  -webkit-background-clip: text; /* suport pentru browser-ele Webkit*/
+}
+
+
+00:00:00.000 --> 00:00:04.000
+Stralucirea elegantei incepe cu o singura bijuterie.
+
+00:00:05.000 --> 00:00:09.000
+Descopera colectia noastra de lux - creata pentru momente speciale.
+
+00:00:10.000 --> 00:00:14.000
+Fiecare detaliu spune o poveste. Fii parte din ea.
+
+00:00:20.000 --> 00:00:25.000
+Am impletit secole de istorie, creand bijuterii pretioase.
+
+00:00:32.000 --> 00:00:40.000
+Acum a venit momentul sa fi TU cel care scrie noi povesti.
+

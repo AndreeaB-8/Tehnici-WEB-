@@ -1,0 +1,53 @@
+@use '../../node_modules/bootstrap/scss/bootstrap.scss' with 
+(
+    $primary: #6a1b9a,
+    $secondary:#ff4081,
+    //border
+    $border-radius: 3rem, // colturi rotunjite mai mari peste tot
+    
+
+    //font h1, h2, etc.
+    $h1-font-size: 3rem,
+    $h2-font-size: 2.5rem,
+    $h3-font-size: 2rem,
+    $h4-font-size: 1.5rem,
+
+    //familia de font implicita
+    $font-family-base: 'Dancing Script' serif,
+
+
+    //la alegere
+    $border-color: #f9b5db, // culoare borduri
+    $border-width: 5px
+);
+
+// definim doua teme cu culori de background diferite
+.theme-light {
+    background-color: #fcb4e8;
+    color: #000000;
+  }
+  
+.theme-dark {
+    background-color: #542943;
+    color: #f8f9fa;
+}
+
+
+
+//culoare text
+$heading-color: #f8a6d0;
+h1, h2, h3, h4{
+        color: $heading-color;
+    }
+
+
+//ecrane dimensiuni
+.custom-container{
+    @media (min-width: 1200px) { // ecrane medii
+        font-size: 1.2rem;
+      }
+    
+      @media (min-width: 1800px) { // ecrane mari
+        font-size: 1.4rem;
+      }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <title>Lumière Bijoux</title>
+        <meta name="keywords" content="bijuterii, aur, argint, coliere, inele, cercei, bratari, cadouri, accesorii">
+        <meta name="description" content="Descopera colectia noastra de bijuterii din aur si argint. Accesorii perfecte pentru orice ocazie!">
+        
+        <%- include("../fragmente/head.ejs") %>
+    </head>
+
+    <body>
+        <%- include("../fragmente/header.ejs") %>
+
+        <main>De la inceputuri...</main>
+        <div id = "container-text">
+            <h1 id = "text">Istoric</h1>
+            <h1 id = "text-reflectat">Istoric</h1>
+        </div>
+        
+        <video 
+            controls 
+            preload = "auto"
+            style = "width: 50%; height:auto; max-width: 700px; min-width: 400px"
+            poster = "resurse/imagini/jewelry-poster.jpeg">
+            <source src = "resurse/video/video.mp4" type = "video/mp4">
+            <source src = "resurse/video/video.ogv" type = "video/ogv">
+        
+            <track src = "resurse/video/tracks/captions_bijuterii_en.vtt" kind = "captions" srclang = "en" label = "engleza" />
+            <track default src = "resurse/video/tracks/captions_bijuterii_ro.vtt" kind = "captions" srclang = "ro" label = "romana" />
+        
+        </video>
+
+    <%- include("../fragmente/footer.ejs") %>
+        
+    </body>
+</html>

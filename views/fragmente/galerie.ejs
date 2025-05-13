@@ -1,0 +1,41 @@
+<section id="galerie-statica">
+    <h2>Galerie</h2>
+    <div id="grid-galerie">
+        <% 
+            literaIndex = 65; //indexarea de la A
+            d = new Date() 
+            ora = d.getHours();
+            let intervalTimp;
+
+            if(ora >= 5 && ora < 12) intervalTimp = "dimineata";
+            else if(ora >= 12 && ora < 20) intervalTimp = "zi";
+            else intervalTimp = "noapte";
+
+
+            //filtram imaginile
+            let imaginiFiltrate = locals.imagini.filter(imag => imag.timp && imag.timp.includes(intervalTimp));
+
+
+            //trunchiem imaginile relevante
+            let nrAfisate = Math.max(6, imaginiFiltrate.length - imaginiFiltrate.length % 3);
+            let imaginiAfisate = imaginiFiltrate.slice(0, nrAfisate);
+
+            for (let imag of imaginiAfisate) {
+                let altText = imag.alt || imag.nume;    //pt ALT
+        %>
+                    <figure>
+                        <picture>
+                            <source srcset = "<% imag.fisier_mediu %>" media = "screen and (max-width:1000px)" />
+                            <source srcset = "<% imag.fisier_mic %>" media = "screen and (max-width:600px)" />
+                            
+                            <img src ="<%- imag.fisier %>" alt = "<%- altText %>" title = "<%- imag.descriere %>">
+                        </picture> 
+                        <figcaption>
+                            <span>
+                                <%= String.fromCharCode(literaIndex++) %>. <%= imag.descriere %>
+                            </span>
+                        </figcaption>
+                    </figure>
+                <% } %>
+    </div>
+</section>

@@ -1,0 +1,263 @@
+// variabile globale pentru dimensiuni
+$inaltime-meniu: 40px;
+$latime-buton: 150px;
+
+// variabile CSS pentru tema cromatica
+body{
+    --culoare-iframe-roz-deschis: #eed8d8;
+    --culoare-violet: #c1b1e1;
+    --culoare-text-inchis: #262626;
+}
+
+// mixin pentru butoane
+@mixin stil-buton($culoare-violet, $culoare-text-inchis){
+    background-color: $culoare-violet;
+    color: $culoare-text-inchis;
+    transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    text-align: center;
+    font-weight: bold;
+    line-height: $inaltime-meniu;
+    width: $latime-buton;
+    height: $inaltime-meniu;
+}
+
+
+nav{
+    height: $inaltime-meniu;
+    margin: 0 auto; /* inlatura margin-left: auto pentru a centra meniul */
+}
+
+#hamburger, #ch-menu {
+    display: none;
+}
+
+b{
+    color: var(--culoare-text-inchis);
+}
+
+ul.meniu{
+    padding: 0px;
+    list-style-type: none;  /* pentru a nu mai avea buline in lista */
+    display: flex;
+    background-color: var(--culoare-iframe-roz-deschis);
+    
+    li{
+        @include stil-buton(var(--culoare-violet), var(--culoare-text-inchis));
+        // pentru ca sagetile sa apara ok
+        position: relative;
+
+        &:hover{
+            background-color: var(--culoare-violet);
+            box-shadow: inset 0px 0px 10px var(--culoare-iframe-roz-deschis);
+    
+            ul{
+                box-shadow: inset 0px 0px 10px var(--culoare-i);
+                display: block;
+                background-color: var(--culoare-iframe-roz-deschis);
+                position: relative;
+                list-style-type: none;
+                animation: animatie_submeniu 0.5s ease-in-out forwards;
+                transform-origin: top;
+            }
+        }
+    }
+
+    ul{
+        display: none;
+        padding: 0;
+        li{
+            transition: padding-left 0.6s ease-in-out;
+            overflow: hidden; /*pt ca sageata sa nu iasa din buton*/
+
+            // SAGEATA
+            &::before {
+                content: "→"; /* adauga sageata */
+                position: absolute;
+                left: -35px;
+                opacity: 0; /* momentan sageata este invizibila*/
+                transition: left 0.6s ease-in-out, opacity 0.6s ease-in-out;
+                transform: translateX(-35px);
+                line-height: $inaltime-meniu;
+            }
+        
+            &:hover {
+                &::before {
+                    left: 5px; /* muta sageata spre dreapta */
+                    opacity: 1; /* face sageata vizibila */
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    a, div{
+        color: var(--culoare-text-inchis);
+        text-decoration: none;
+        transition: all 1s linear;
+        display: block;
+        height: 100%;
+        cursor: pointer;
+    }
+}
+
+// SUBMENIU DESCHIDERE
+@keyframes animatie_submeniu{
+    0%{
+        opacity: 0;
+        transform: scaleY(0);
+    }
+    100%{
+        opacity: 1;
+        transform: scaleY(1);
+    }
+}
+
+@keyframes animatie-hamburger{
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+@keyframes animatie-linii-hamburger {
+    0% {
+        opacity: 0.3;
+        background-color: #000000;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        opacity: 0.5;
+        background-color: #3b064b;
+        transform: rotate(90deg);
+    }
+
+    50% {
+        opacity: 0.8;
+        background-color: #853f9a;
+        transform: rotate(180deg);
+    }
+
+    75% {
+        opacity: 0.9;
+        background-color: #ad58c7;
+        transform: rotate(270deg);
+    }
+
+    100% {
+        opacity: 1;
+        background-color: var(--culoare-violet);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animatie-meniu {
+    0% {
+        transform: translate(100%, -100%) scale(0.1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    // micsorarea textului ecran mediu
+    .meniu li{
+      font-size: 14px;  
+    }
+    
+    .meniu li a span{
+        display: none;  /*ramane doar icon ul*/
+    }
+}
+
+@media screen and (max-width: 800px){
+    #hamburger{
+        display: block;
+        z-index: 15;
+        position: absolute;
+        right: 20px;
+        top: 4%;
+        cursor: pointer;
+        animation: animatie-hamburger 0.5s forwards;
+    }
+
+    // #hamburger img{
+    //     width: 40px;
+    //     height: 40px;
+    //     object-fit: contain;
+    // }
+
+    #hamburger .hamburger-icon{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40px;
+        height: 30px;
+        // transition: all 0.3s ease;
+    }
+
+    .line{
+        width: 100%;
+        height: 5px;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        // animation: animatie-linii-hamburger 0.5s forwards;
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation: animatie-linii-hamburger 0.5s ease forwards;
+                animation-delay: 300ms * ($i - 1);
+            }
+        }
+    }
+
+    
+    ul.meniu {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        left: -180px;
+        width: 100vw;
+        top: $inaltime-meniu;
+        background-color: var(--culoare-iframe-roz-deschis);
+        top: 68px;
+        animation: animatie-meniu 1s ease forwards;
+        padding: 20px;
+        transform-origin: top right;
+        li{
+           position: relative;
+        width: 100%;
+        text-align: center;
+
+            ul{
+                display: none;
+                position: static;
+                left: 0;
+                width: 100%;
+                background-color: var(--culoare-iframe-roz-deschis);
+                z-index: 10; /*submeniul apare deasupra altor elemente*/
+                animation: none;
+                
+                li {
+                    width: 100%;
+                    
+                    &:hover::before {
+                        display: none; //ascunde sageata
+                    }
+                } 
+            }
+        }   
+
+        &:hover > ul{
+            display: block;
+            animation: animatie_submeniu 0.5s ease-in-out forwards;
+        }
+    }
+}
