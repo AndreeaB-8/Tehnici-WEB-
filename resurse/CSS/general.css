@@ -22,6 +22,29 @@ body {
     --umbra: 0px 4px 8px #262626;
 }
 
+/* TEMA INTUNECATA */
+body.dark{
+    font-family: 'Arial', sans-serif;
+    font-size: 1em;    /*dimensiunea de baza 1em = 16px*/
+    background-color: #902d65;
+    transition: font-size 0.3s ease-in-out; /*tranzitie pt schimbarea dimensiunii fontului*/
+    --spatiere-pagina: 100px;
+    --border: 20px; /*radius*/
+    --padding: 20px;
+    --culoare-iframe-roz: #e168a2;
+    --culoare-iframe-roz-deschis: #edaedb;
+    --culoare-celula-para: 2px solid #d78aa8;
+    --culoare-celula-impara: 2px solid #bfa8e1;
+    --culoare-background-nav: #edaedb;
+    --culoare-text: #fce4ec;
+    --culoare-text-inchisfban: #fafafa;
+    --culoare-background-mov: #fafafa;
+    --border-default: 1px solid;
+    --border-th: 3px solid #d78aa8;
+    --umbra: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+
 img{
     width: 45%;
     max-width: 180px;
@@ -518,10 +541,6 @@ a:hover {
         font-weight: bold;
 	}
 
-    /* body{
-         margin-top: 40px; pt a nu se suprapune cu site-ul 
-    } */
-
     img, iframe, figure, figcaption, #link-top, #icon{
         display: none;
     }
@@ -658,7 +677,6 @@ a:hover {
     }
 
     /*HOVER GALERIE*/
-    
     #grid-galerie figure:hover {
         box-shadow: grey 0px 0px 7px;
         transform: rotate(360deg) scale(1.5); /* roteste imaginea cu 360 de grade si o mareste cu 50% */
@@ -716,3 +734,48 @@ a:hover {
         color: rgb(183, 0, 255); /* sau ce culoare vrei */
     }
     
+/* STILIZARE SETURI */
+
+.set-produs {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  background-color: #fafafa;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.set-produs h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.set-produs p {
+  margin: 6px 0;
+  color: #555;
+  font-size: 1rem;
+}
+
+.set-produs ul {
+  list-style: disc inside;
+  margin: 15px 0;
+  padding-left: 15px;
+  color: #333;
+}
+
+.produse-set {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.produs:hover {
+  box-shadow: 0 4px 12px rgb(0, 0, 0);
+}
+
+.seturi-produse-titlu {
+    margin-top: 20px;
+}

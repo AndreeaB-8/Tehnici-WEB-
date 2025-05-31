@@ -1,0 +1,20 @@
+<% seturi.forEach(set => { %>
+        <section class="set-produs">
+            <h2><%= set.nume_set %></h2>
+            <p><%= set.descriere_set %></p>
+            <p>Preț total fără reducere: <%= Number(set.pret_total).toFixed(2) %> RON</p>
+            <p>Reducere aplicată: <%= (Math.min(5, set.nr_produse) * 5) %>%</p>
+            <p>Preț set cu reducere: <%= Number(set.pret_set_reducere).toFixed(2) %> RON</p>
+
+            <div class="produse-set">
+            <% set.produse.forEach(prod => { %>
+                <article class="produs">
+                <a href="/produs/<%= prod.id %>">
+                    <img src="/resurse/imagini/produse/<%= prod.imagine %>" alt="<%= prod.nume %>" style="width:100px; height:auto;">
+                    <p><%= prod.nume %></p>
+                </a>
+                </article>
+            <% }) %>
+            </div>
+        </section>
+<% }) %>

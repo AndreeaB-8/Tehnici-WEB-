@@ -1,7 +1,17 @@
+<script src = "/resurse/js/meniu.js"></script>
+
 <header>
     <h1>Lumière Bijoux</h1>
     <p id="watermark"></p>
     <i class ="fa fa-diamond" style="font-size:24px" id = "icon"></i>
+        
+        <!-- LUNA - TEMA INTUNECATA -->
+        <li style="list-style-type: none;" class="form-check form-switch d-flex align-items-center">
+            <input class="form-check-input" type="checkbox" id="schimba-tema" style="cursor: pointer;">
+            <label class="form-check-label ms-2" for="schimba-tema">
+            <i id="icon-tema" class="bi bi-moon" style="font-size: 30px;"></i>
+            </label>
+        </li>
     <nav>
         <label id="hamburger" for="ch-menu">
             <!-- <img src="resurse/imagini/Hamburger_icon_alb.png" alt="menu"> -->
@@ -19,25 +29,32 @@
                     <i class="fa fa-home" style="margin-right: 8px;"></i><span>Acasa</span>
                 </a>
                 <ul>
-                    <li><a href="#Oferte_speciale">Oferte</a></li>
-                    <li><a href="#Produse_populare">Produse</a></li>
-                    <li><a href="#Prezentare_magazin">Despre noi</a></li>
-                    <li><a href="#Faq">Intrebari</a></li>
-                    <li><a href="#Contact">Contact</a></li>
+                    <li><a href="/index#Oferte_speciale">Oferte</a></li>
+                    <li><a href="/index#Produse_populare">Produse</a></li>
+                    <li><a href="/index#Prezentare_magazin">Despre noi</a></li>
+                    <li><a href="/index#Faq">Intrebari</a></li>
+                    <li><a href="/index#Program">Program</a></li>
                 </ul>
             </li>
             
 
             <li><div><b>Categorii</b></div>
                 <ul>
-                    <li><a href="#coliere">Coliere</a></li>
-                    <li><a href="#bratari">Bratari</a></li>
-                    <li><a href="#inele">Inele</a></li>
-                    <li><a href="#cercei">Cercei</a></li>
+                    <li><a href="/produse">Toate</a></li>
+                    <!-- <li><a href="/produse?tip=coliere">Coliere</a></li>
+                    <li><a href="/produse?tip=bratari">Bratari</a></li>
+                    <li><a href="/produse?tip=inele">Inele</a></li>
+                    <li><a href="/produse?tip=cercei">Cercei</a></li> -->
+
+                    <!-- LOCALS => GENERATE -->
+                    <% for (let opt of locals.optiuniMeniu) { %>
+                        <li><a href="/produse?tip=<%= opt.unnest %>"><%= opt.unnest %></a></li>
+                    <% } %>
                 </ul>
             </li>
             
-            <li><a href="#">Istoric</a></li>
+            <li><a href="/istoric#Istoric">Istoric</a></li> 
+            <li><a href="/seturi">Seturi</a></li>
         </ul>
     </nav>
     </header>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <meta name="keywords" content="bijuterii, aur, argint, coliere, inele, cercei, bratari, cadouri, accesorii">
+        <meta name="description" content="Descopera colectia noastra de bijuterii din aur si argint. Accesorii perfecte pentru orice ocazie!">
+        
+        <title>Lumière Bijoux - home</title>
+        <%- include("../fragmente/head") %>     
+        <link href="/resurse/css/produs.css" type="text/css" rel="stylesheet" />
+        <script src="/resurse/js/comparare.js"></script>
+
+    </head>
+    <body>
+        <%- include("../fragmente/header") %>
+
+    <main>
+        <section>
+            <h2>Pagină produs</h2>
+                <article id="art-produs">
+                    <h3><span class="nume val-nume"><%- locals.prod.nume %></span></h3>
+                    <div class="container-produs">
+                            <table>
+                            <tr>
+                                <td>Pret:</td>
+                                <td class = "val-pret"><%- locals.prod.pret %></td>
+                            </tr>
+
+                            <tr>
+                                <td>Gramaj:</td>
+                                <td class = "val-gramaj"><%- locals.prod.gramaj %> g</td>
+                            </tr>
+
+                            <tr>
+                                <td>Material principal:</td>
+                                <td class = "val-material"><%- locals.prod.material_principal %></td>
+                            </tr>
+
+                            <tr>
+                                <td>Pietre pretioase:</td>
+                                <td class = "val-pietre"><%- locals.prod.pietre_pretioase %></td>
+                            </tr>
+
+                            <tr>
+                                <td>Personalizabila:</td>
+                                <td class = "val-personalizabila"><%- locals.prod.personalizabila %></td>
+                            </tr>
+
+                            <tr>
+                                <td>Data adaugare:</td>
+                                <td class = "val-data"><%- locals.prod.data_adaugare %></td>
+                            </tr>
+                            </table>
+
+                        <div class="imag-produs">
+                            <img class = "val-imagine" src="/resurse/imagini/produse/<%- locals.prod.imagine %>" alt="[imagine <%- locals.prod.nume %>]" />
+                        </div>   
+                    </div>
+                    
+                    <p class="descriere"><%- locals.prod.descriere %></p>
+                    <p class = "categorie">Categorie: <span class="categorie"><%- locals.prod.categorie %></span></p>
+                        
+                    <!-- <button class="btn btn-info btn-compara mt-2" data-nume="<%- locals.prod.nume %>">Compara</button>
+                     -->
+
+                     <button 
+                        class="btn btn-info btn-compara mt-2" 
+                        data-nume="<%= prod.nume %>"
+                        data-pret="<%= prod.pret %>"
+                        data-material="<%= prod.material_principal %>"
+                        data-gramaj="<%= prod.gramaj %>"
+                        data-categorie="<%= prod.categorie %>">
+                        Compara
+                    </button>
+
+                </article>
+        </section>
+
+
+        <section>
+            <h3 class = "seturi-produse-titlu">Seturi din care face parte acest produs:</h3>
+            <% seturi.forEach(function(set) { %>
+                <div class="set">
+                    <h4><%= set.nume_set %></h4>
+                    <p><%= set.descriere_set %></p>
+                    <p>Preț set: <strong><%= set.pret_set_reducere %> lei</strong></p>
+                    <div class="produse-set">
+                        <% set.produse.forEach(function(p) { %>
+                            <div class="produs-set">
+                                <a href="/produs/<%= p.id %>">
+                                    <img src="/resurse/imagini/produse/<%= p.imagine %>" alt="<%= p.nume %>" style="width:80px; height:auto;">
+                                    <div><%= p.nume %></div>
+                                </a>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+            <% }); %>
+        </section>
+
+    </main>
+
+    <%- include("../fragmente/footer") %>
+    </body>
+</html>

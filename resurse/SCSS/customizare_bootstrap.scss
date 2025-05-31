@@ -1,10 +1,24 @@
 @use '../../node_modules/bootstrap/scss/bootstrap.scss' with 
 (
-    $primary: #6a1b9a,
-    $secondary:#ff4081,
+    $primary: #c3b1e1,
+    $secondary:#e168a2,
+    $success: #f9b5db,
+
+    $form-range-thumb-width: 1.5rem, //latimea bulinei
+    $form-range-thumb-height: 1.5rem,  //inaltimea bulinei
+    $form-range-thumb-bg: #6a1b9a,       //culoarea bulinei
+    $form-range-track-bg: #f9b5db,        //culoarea barei
+
+
     //border
     $border-radius: 3rem, // colturi rotunjite mai mari peste tot
     
+    // inputuri si butoane
+    $input-border-radius: 0.75rem,
+    $input-border-width: 2px,
+    $btn-border-radius: 0.75rem,
+    $btn-border-width: 2px,
+
 
     //font h1, h2, etc.
     $h1-font-size: 3rem,
@@ -19,6 +33,7 @@
     //la alegere
     $border-color: #f9b5db, // culoare borduri
     $border-width: 5px
+
 );
 
 // definim doua teme cu culori de background diferite
@@ -51,3 +66,31 @@ h1, h2, h3, h4{
         font-size: 1.4rem;
       }
 }
+
+
+
+
+//************************************88
+    /* Adăugări compatibile Bootstrap */
+    /* Când un produs este păstrat */
+    .produs.pastrat {
+      border: 2px solid var(--bs-primary);
+      background-color: var(--bs-primary-bg-subtle);
+    }
+
+    /* Butonul păstrează activ */
+    .btn-pastreaza.active {
+      background-color: var(--bs-primary) !important;
+      color: white !important;
+      border-color: var(--bs-primary) !important;
+    }
+
+    /* Ascundere temporară */
+    .produs.ascuns-temporar {
+      display: none !important;
+    }
+
+    /* Ștergere sesiune */
+    .produs.sters-sesiune {
+      display: none !important;
+    }

@@ -3,8 +3,8 @@
     <div id="grid-galerie">
         <% 
             literaIndex = 65; //indexarea de la A
-            d = new Date() 
-            ora = d.getHours();
+            d = new Date()  //obtinem data curenta
+            ora = d.getHours(); //obtinem ora curenta
             let intervalTimp;
 
             if(ora >= 5 && ora < 12) intervalTimp = "dimineata";
@@ -12,12 +12,15 @@
             else intervalTimp = "noapte";
 
 
-            //filtram imaginile
+            //filtram imaginile pt momentul zilei
+            //verifica daca img are o propr. timp si daca are, verifica daca lista timp a imaginii include momentul zilei curente
             let imaginiFiltrate = locals.imagini.filter(imag => imag.timp && imag.timp.includes(intervalTimp));
 
 
-            //trunchiem imaginile relevante
+            //calculam cate imagini sa fie afisate
+            //afisam minim 6, sau cel mai mare multiplu de 3 mai mic decat nr de imagini filtrate
             let nrAfisate = Math.max(6, imaginiFiltrate.length - imaginiFiltrate.length % 3);
+            //luam primele nrAfisate elemente din imaginiFiltrate
             let imaginiAfisate = imaginiFiltrate.slice(0, nrAfisate);
 
             for (let imag of imaginiAfisate) {
@@ -34,6 +37,8 @@
                             <span>
                                 <%= String.fromCharCode(literaIndex++) %>. <%= imag.descriere %>
                             </span>
+                            
+                            
                         </figcaption>
                     </figure>
                 <% } %>

@@ -2,7 +2,7 @@
 	"cale_galerie":"resurse/imagini/galerie",
 	"imagini": [
 		{
-			"fisier":"cercei1.jpg",
+			"fisier":"cercei1.jpg",	
 			"nume": "Cercei cu diamante",
 			"descriere":"Cercei din argint cu diamante",
 			"timp": ["dimineata", "zi"]
