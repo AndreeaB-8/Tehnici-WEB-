@@ -1,4 +1,4 @@
-# Tehnici-WEB: Jewelry Website
+# Jewelry Website
 
 ## Description
 This is a web development project created as part of the Web Technologies course. The website showcases a fictional jewelry store with features such as product listings, user interaction, and basic backend data handling.
@@ -12,7 +12,7 @@ This is a web development project created as part of the Web Technologies course
 - pgAdmin – for database management
 
 ## Main Features
--- **Product Search**: 
+- **Product Search**: 
   - Can find products even if searched without diacritics (e.g., "bratara" matches "brățară")
   - Supports partial word matching (e.g., searching "aur" finds "brățară aurie")
 - **Product Comparison**:
